@@ -63,8 +63,8 @@ plt.show()'''
 '''from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.distplot(random.binomial(n = 100, p = 0.5, size = 750), hist = False, label = "binomial")
-sns.distplot(random.normal(loc=100, scale=0.75, size = 750), hist = False, label = "normal")
+sns.distplot(random.binomial(n = 100, p = 0.5, size = 750), label = "binomial")
+sns.distplot(random.normal(loc=100, scale=0.75, size = 750), label = "normal")
 plt.show()'''
 
 '''from numpy import random
@@ -83,4 +83,11 @@ import seaborn as sns
 sns.distplot(random.poisson(lam = 3, size = 750))
 sns.distplot(random.binomial(n = 100, p = 0.5, size = 750), label = "binomial")
 sns.distplot(random.normal(loc=100, scale=0.75, size = 750), label = "normal")
+plt.show()'''
+
+'''import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set_theme()
+df = sns.load_dataset("penguins")
+sns.distplot(df["flipper_length_mm"])
 plt.show()'''
